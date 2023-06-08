@@ -5,7 +5,8 @@ def search_shows_by_actor(actor):
   response = requests.get(url)
   response.raise_for_status()
   data = response.json()
-  
+
+  #score doesnt work, deathday/still alive/birthday
   for result in data:
     person = result["person"]
     if person ["deathday"] is not None:
